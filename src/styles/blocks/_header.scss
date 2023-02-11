@@ -1,0 +1,50 @@
+.header {
+  background-size: cover;
+  background-position: right;
+  background-image: url(../images/header.png);
+
+  @include onTablet {
+    background-position: center;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    box-sizing: border-box;
+    height: 100vh;
+    
+    padding: 29px 0 20vh;
+
+    @include onTablet {
+      padding: 34px 0 22vh;
+    }
+  
+    @include onDesktop {
+      padding: 36px 0 30vh;
+    }
+  }
+
+  &__top {
+    @include top-actions;
+  }
+
+  &__title {
+    margin: 0;
+    text-align: center;
+    font-weight: 700;
+    font-size: 36px;
+    color: $c-white;
+    line-height: 100%;
+    letter-spacing: -1.5px;
+
+    @include onTablet {
+      font-size: 64px;
+    }
+
+    @include onDesktop {
+      font-size: 80px;
+    }
+  }
+}

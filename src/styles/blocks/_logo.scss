@@ -1,0 +1,10 @@
+.logo {
+  &__image {
+    display: flex;
+    height: 38px;
+
+    @include onTablet {
+      height: 56px;
+    }
+  }
+}
